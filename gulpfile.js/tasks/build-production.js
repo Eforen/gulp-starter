@@ -1,9 +1,6 @@
-var config       = require('../config')
-var gulp         = require('gulp')
-var gulpSequence = require('gulp-sequence')
-var getEnabledTasks = require('../lib/getEnabledTasks')
+var gulp         = require('gulp');
+var gulpSequence = require('gulp-sequence');
 
 gulp.task('build:production', function(cb) {
-  var tasks = getEnabledTasks('production')
-  gulpSequence('clean', tasks.assetTasks, tasks.codeTasks, 'rev', cb)
-})
+  gulpSequence('clean', ['fonts', 'iconFont', 'images', 'svg-sprite'], ['sass', 'webpack:production'], 'html', 'rev', cb);
+});

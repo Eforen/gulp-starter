@@ -1,5 +1,6 @@
 gulp-starter
 ============
+This is my version of vigetlabs gulp starter.
 Gulp Starter has evolved into a full featured modern asset pipeline! It can be used as-is as a static site builder, or can be configured and integrated into your own development environment and site structure. 
 
 ```bash
